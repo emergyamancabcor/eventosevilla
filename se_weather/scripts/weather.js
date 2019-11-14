@@ -13,7 +13,7 @@ var city;
 
 $.ajax({
   type: "GET",
-  url: "http://api.openweathermap.org/data/2.5/weather?id=2510911&APPID=97a44702a28b87a93b59c98f75e4966f&lang=es&units=metric",
+  url: "https://api.openweathermap.org/data/2.5/weather?id=2510911&APPID=97a44702a28b87a93b59c98f75e4966f&lang=es&units=metric",
   dataType: "json",
   success: function (data) {
     vars = data.main;
