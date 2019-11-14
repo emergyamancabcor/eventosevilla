@@ -1,0 +1,94 @@
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+
+body {
+  background: #fff;
+}
+img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.wheater-title-1{
+  text-transform: uppercase;
+  color: #6C7A88;	
+  font-family: "Source Sans Pro";	
+  font-size: 13px;	
+  font-weight: 600;	
+  letter-spacing: 1.21px;	
+  line-height: 17px;
+}
+
+.wheater-box {	
+  border-right: 1px solid rgba(211, 205, 205, 0.5);
+  
+}
+
+#weather-temperature {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+#weather-icon-image{
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+#weather-temperature-box{
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+.wheater-title-2 {
+  text-transform: uppercase;
+  color: #BEBEBE;	
+  font-family: "Source Sans Pro";	
+  font-size: 16px;	
+  font-weight: 600;	
+  line-height: 20px;
+}
+.weather-icon-image-subtitle{
+  color: #2B334A;	
+  font-family: "Source Sans Pro";	
+  font-size: 16px;	
+  font-weight: 600;	
+  line-height: 22px;
+}
+
+
+.weather-temperature-max-min{
+  color: #2B334A;	
+  grid-column: 2 / 4;
+  grid-row: 1;
+  font-family: "Source Sans Pro";	
+  font-size: 48px;	
+  font-weight: 600;	
+  line-height: 32px;
+}
+
+.weather-description-icon{
+  color: #BEBEBE;	
+  font-family: "Source Sans Pro";	
+  font-size: 16px;	
+  line-height: 22px;
+}
+
+.wheater-value{
+  color: #6C7A88;	
+  font-family: "Open Sans";	
+  font-size: 48px;	
+  font-weight: 300;	
+  letter-spacing: -0.6px;	
+  line-height: 65px;
+
+}
+
+#main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
