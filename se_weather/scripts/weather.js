@@ -29,11 +29,13 @@ $.ajax({
     pressure=Math.round(vars.pressure);
 
     if (weather) {
-      icon = weather.icon
+      //icon = weather.icon
+      icon = weather.id
       description = weather.description
       description = description.charAt(0).toUpperCase() + description.slice(1)
       $('#weather-humidity-value').html(humidity + '%');
-      $('#weather-icon-image').html('<img src="http://openweathermap.org/img/w/' + icon + '.png"></img><div class="weather-icon-image-subtitle">' + city + '</div>');
+      //$('#weather-icon-image').html('<img src="http://openweathermap.org/img/w/' + icon + '.png"></img><div class="weather-icon-image-subtitle">' + city + '</div>');
+      $('#weather-icon-image').html('<i class="owf owf-' + icon + ' owf-4x"></i><div class="weather-icon-image-subtitle">' + city + '</div>');
       $('#weather-description').html(description);
       $('#weather-wind-value').html(wind + ' KM/H')
       $('#weather-wind-value-2').html((deg ? deg : '0') + ' º')
