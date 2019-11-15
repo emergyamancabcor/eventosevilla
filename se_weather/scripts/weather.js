@@ -10,6 +10,7 @@ var wind;
 var deg;
 var humidity;
 var city;
+var pressure;
 
 $.ajax({
   type: "GET",
@@ -25,6 +26,7 @@ $.ajax({
     deg = data.wind.deg
     weather = data.weather ? data.weather[0] : undefined;
     city = data.name;
+    pressure=Math.round(vars.pressure);
 
     if (weather) {
       icon = weather.icon
@@ -34,8 +36,9 @@ $.ajax({
       $('#weather-icon-image').html('<img src="http://openweathermap.org/img/w/' + icon + '.png"></img><div class="weather-icon-image-subtitle">' + city + '</div>');
       $('#weather-description').html(description);
       $('#weather-wind-value').html(wind + ' KM/H')
-      $('#weather-wind-value-2').html(deg + ' º')
+      $('#weather-wind-value-2').html((deg ? deg : '0') + ' º')
       $('#weather-temperature-max-min').html(temp_min + 'º / ' + temp_max + 'º')
+      $('#weather-air-quality-value').html(pressure + ' hPa');
 
     }
 
